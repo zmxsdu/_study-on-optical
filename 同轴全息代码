@@ -1,1 +1,31 @@
+Filter_Background
+//imagesc(C)
+
+Q:figure;imagesc(C);axis equal;axis off;colormap(gray);title('Red Background');
+
+a.
+figure 生成一个新的图窗窗口
+b.
+axis square 当前坐标系图形设置为方形，横轴及纵轴比例是1：1
+axis equal 将横轴纵轴的定标系数设成相同值 ,即单位长度相同，
+c.
+axis off:关闭所有的坐标轴标签、刻度、背景
+d.
+colormap(gray) :gray 为参数之一，所有的显示在灰度范围内
+
+//均值滤波
+均值滤波也称为线性滤波，其采用的主要方法为邻域平均法。
+
+//padarray
+data = padarray(data,[3 3],max(data(:)),'both');
+
+data = padarray(array,[a,b],value,direction);
+
+[a,b] :
+在第一个维度扩充a行，第二个维度b列
+
+direction：
+'pre' 表示在每一维的第一个元素前填充；
+'post' 表示在每一维的最后一个元素后填充；
+'both' 表示在每一维的第一个元素前和最后一个元素后填充，此项为默认值.
 
